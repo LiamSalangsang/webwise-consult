@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebWise Consultancy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <div class="flex w-full justify-center text-center">
+      <a class="md:w-[25rem] w-[15rem] text-white font-bold pt-9 md:pl-9" href = "index.html">   
+       <img src = "./web-wise-consult-high-resolution-logo.png"/>
+     </a>
+
+      <div class="w-full md:flex justify-center hidden">
+        <nav class="flex mt-[2.5rem] gap-[2rem] text-[#f8f9fa] items-center">
+          <a class="flex justify-center items-center h-[4rem] w-[5.4rem] hover:bg-white/70 transition" href="about.html">ABOUT</a>
+          <a class="flex justify-center items-center h-[4rem] w-[5.4rem] hover:bg-white/70 transition" href="work.html">WORK</a>
+          <a class="flex justify-center items-center h-[4rem] w-[5.4rem] hover:bg-white/70 transition" href="team.html">TEAM</a>
+          <a class="hover:text-black transition text-white bg-white/70 h-[4rem] w-[5.4rem] flex justify-center items-center" href="contact.html">CONTACT</a>
+        </nav>
+      </div>
+
+      <a
+        class="hidden md:flex text-white text-center"
+        href="mailto:loremipsum@example.com"
+        ><div
+          class="hover:bg-gray-700 duration-200 ease-in-out w-[9rem] h-[4rem] mt-[2rem] flex justify-center items-center text-[0.9rem] bg-black/90 pl-[7px] pr-[7px] pt-4 pb-4 mr-10"
+        >
+          CONTACT US
+        </div></a
+      >
+    </div>
+
+        <div class="w-full flex justify-center mt-[3rem]">
+      <div
+        class="w-[97%] md:h-[30rem] h-[20rem]  text-[4rem] text-white bg-[#212529] flex justify-center items-center"
+      >
+        Contact
+      </div>
+    </div>
+
+
+     <div
+    class="w-full flex justify-center mt-[3rem] text-[0.9rem] uppercase text-gray-500"
+  >
+    Send a message
+  </div>
+
+  <div class="flex justify-center text-[2.5rem]">Contact Us</div>
+
+   <div class="w-full flex justify-center">
+      <div
+        class="bg-[#212529] my-24 h-[0.1rem] w-[75rem] rounded-full hidden sm:block"
+      ></div>
+    </div>
+
+     <div class="mt-[5rem] flex justify-center items-center md:flex-row flex-col gap-[3rem]"> 
+     <form id = "contactForm" class="bg-white p-8 rounded-lg shadow-lg md:w-[40rem] w-[90%]">
+          <h2 class="text-2xl font-bold mb-6 text-center text-black">Contact Us</h2>
+          <!-- Name input field -->
+          <div class="mb-4 text-black">
+              <label for="name" class="block mb-2 text-gray-700">Name:</label>
+              <input type="text" id="name" name="name" class="w-full p-2 border border-gray-300 rounded"  placeholder="John Doe" required>
+          </div>
+          <!-- Email input field -->
+          <div class="mb-4 text-black">
+              <label for="email" class="block mb-2 text-gray-700">Email:</label>
+              <input type="email" id="email" name="email" class="w-full p-2 border border-gray-300 rounded"   placeholder="JohnDoe@contact.com" required>
+          </div>
+          <!-- Message input field -->
+          <div class="mb-4 text-black">
+              <label for="message" class="block mb-2 text-gray-700">Message:</label>
+              <textarea  placeholder="I have a question..." id="message" name="message" class="w-full p-2 border border-gray-300 rounded" rows="4" required></textarea>
+          </div>
+          <!-- Submit button -->
+          <button type="submit" class="w-full bg-gray-600 text-white py-2 rounded-lg hover:bg-black transition">Send Message</button>
+            </form>
+
+
+             <div class="flex flex-col gap-10 md:border-l-4 p-10">
+              <div>
+                <h1>Our Office</h1>
+                <div class="text-gray-500"> Lorem Ipsum Dolor Street</div>
+              </div>
+              <div>
+                <h1>Working Hours</h1>
+                <div class="text-gray-500"> 9am - 5pm, Mon - Fri</div>
+                
+              </div>
+              <div>
+                <h1>Contact</h1>
+                <div class="text-gray-500"> Lorem-ipsum@contact.com</div>
+                <div class="text-gray-500"> +99 Lorem 902</div>
+              </div>
+            </div>
+
+        </div>
+
+     <div class="w-full flex justify-center mt-[10rem] mb-[3rem]">
+      <div
+        class="w-[97%] md:h-[30rem] h-[20rem] flex-col  bg-[#212529] flex justify-center items-center"
+      >
+        <div class="text-[2.1em]">Get in Contact With Us!</div>
+        <div class="md:text-[1.2rem] text-[1rem] text-gray-500 text-center md:w-[50%] w-[80%]">
+          Questions? Ideas? Let's chat! Reach out to us using the form below, and we'll get back to you ASAP. We're here to help and eager to hear from you!
+        </div>
+
+        <a
+          href="contact.html"
+          class="w-[9rem] text-white uppercase mt-[2rem] text-[0.9rem] text-center bg-gray-950 pl-[9px] pr-[9px] pt-4 pb-4 hover:bg-gray-700 duration-200 ease-in-out"
+        >
+          Start Now
+        </a>
+      </div>
+    </div>
+
+    <script>
+  document
+  .getElementById("contactForm")
+  .addEventListener("submit", async (e) => {
+    e.preventDefault();
+    await submitContact(
+      document.getElementById("name").value,
+      document.getElementById("email").value,
+      document.getElementById("message").value
+    );
+  });
+</script>
+    
+</body>
+</html>
